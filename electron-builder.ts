@@ -3,9 +3,9 @@ import type { Configuration } from "electron-builder";
 import { applyAppImageSandboxFix } from "./scripts/build/sandboxFix.mjs";
 
 export const config: Configuration = {
-    appId: "app.legcord.Legcord",
-    productName: "Legcord",
-    artifactName: "Legcord-${version}-${os}-${arch}.${ext}",
+    appId: "app.GhostCord.GhostCord",
+    productName: "GhostCord",
+    artifactName: "GhostCord-${version}-${os}-${arch}.${ext}",
     beforePack: applyAppImageSandboxFix,
     protocols: [
         {
@@ -18,10 +18,10 @@ export const config: Configuration = {
         darkModeSupport: true,
         notarize: true,
         extendInfo: {
-            NSMicrophoneUsageDescription: "Legcord requires access to the microphone to function properly.",
-            NSCameraUsageDescription: "Legcord requires access to the camera to function properly.",
+            NSMicrophoneUsageDescription: "GhostCord requires access to the microphone to function properly.",
+            NSCameraUsageDescription: "GhostCord requires access to the camera to function properly.",
             NSAudioCaptureUsageDescription:
-                "Legcord requires access to system audio to share sound during screenshare.",
+                "GhostCord requires access to system audio to share sound during screenshare.",
             NSCameraUseContinuityCameraDeviceType: true,
             "com.apple.security.device.audio-input": true,
             "com.apple.security.device.camera": true,
@@ -32,11 +32,11 @@ export const config: Configuration = {
     linux: {
         icon: "build/icon.icns",
         target: ["AppImage", "deb", "rpm", "tar.gz"],
-        maintainer: "linux@legcord.app",
+        maintainer: "linux@GhostCord.app",
         category: "Network",
         desktop: {
             entry: {
-                StartupWMClass: "legcord",
+                StartupWMClass: "GhostCord",
             },
         },
     },
@@ -47,8 +47,8 @@ export const config: Configuration = {
     },
 
     appx: {
-        applicationId: "smartfrigde.Legcord",
-        identityName: "53758smartfrigde.Legcord",
+        applicationId: "smartfrigde.GhostCord",
+        identityName: "53758smartfrigde.GhostCord",
         publisher: "CN=EAB3A6D3-7145-4623-8176-D579F573F339",
         publisherDisplayName: "smartfrigde",
         backgroundColor: "white",
